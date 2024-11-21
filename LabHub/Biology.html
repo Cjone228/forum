@@ -8,7 +8,7 @@
         <style>
 
 body {
-background-color: rgb(154, 211, 205);
+    background-color: rgb(154, 211, 205);
 }
 
 .header {
@@ -390,10 +390,22 @@ input[type="text"] {
                 <div class="toprow">
                     <div class="backdrop">
                     <p class="backdropheader">Biology Forums</p>
-                    <button class="forumbutton"><div class=forumbuttonobject><image class="forumbuttonicon" src=pictures/labicon.png></image>Labs</div></button>
-                    <button class="forumbutton"><div class=forumbuttonobject><image class="forumbuttonicon" src=pictures/projecticon.png></image>Student Projects</div></button>
-                    <button class="forumbutton"><div class=forumbuttonobject><image class="forumbuttonicon" src=pictures/eventicon.png></image>Events</div></button>
-                   
+                    <!--Button leading from Labs to labsforum.html-->
+                    <a href="labsforum.html">
+                        <button class="forumbutton">
+                          <div class="forumbuttonobject">
+                            <img class="forumbuttonicon" src="pictures/labicon.png" alt="icon" />Labs</div>
+                        </button>
+                      </a>
+                    
+                    <!--Button leading from Study Groups to Studygroups.html-->
+                    <a href="studygroups.html">
+                        <button class="forumbutton">
+                          <div class="forumbuttonobject">
+                            <img class="forumbuttonicon" src="pictures/studyicon.png" alt="icon" />Study Group</div>
+                        </button>
+                      </a>
+                        
                    <!--Button leading from Internships to internships.html-->
                     <a href="Internships.html">
                         <button class="forumbutton">
@@ -493,8 +505,8 @@ input[type="text"] {
                         <p><strong>My Stuff</p></strong></div>
                         <div class="menubuttondiv">
                             <a style=text-decoration:none href="saved_for_later.html"><button class="menubutton"><image class="menuicon" src=pictures/bookmarkicon.png></image>Bookmarked</button></a>
-                            <button class="menubutton"><image class="menuicon" src=pictures/usericon.png></image>My Profile</button>
-                            <button class="menubutton"><image class="menuicon" src=pictures/mailboxicon.png></image>Messages</button>
+                            <a style=text-decoration:none href="myprofile.html"><button class="menubutton"><image class="menuicon" src=pictures/usericon.png></image>My Profile</button></a>
+                            <a style=text-decoration:none href="messages.html"><button class="menubutton"><image class="menuicon" src=pictures/mailboxicon.png></image>Messages</button></a>
                         </div>
                     </div>
                     </div>

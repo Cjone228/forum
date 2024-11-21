@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sign In</title>
+    <title>Create Account</title>
     <link rel="stylesheet" href="styles.css">
     <style>
         body {
@@ -33,20 +33,22 @@
             color: rgb(9, 83, 115);
         }
 
-        input[type="text"], input[type="password"] {
+        input[type="text"], input[type="password"], input[type="email"] {
             width: 100%;
-            padding: 8px;
-            margin: 5px 0 10px;
+            padding: 8px; /* Adjusted padding for shorter inputs */
+            margin: 5px 0 10px; /* Adjusted margin */
             border: 1px solid rgb(30, 190, 171);
             border-radius: 5px;
             box-sizing: border-box;
         }
 
-        .signin-button {
+        .createaccountbutton {
             background-color: rgb(30, 190, 171);
             color: white;
             border: none;
             padding: 10px;
+            text-align: center;
+            display: inline-block;
             font-size: 16px;
             margin: 10px 0;
             border-radius: 5px;
@@ -54,61 +56,73 @@
             width: 100%;
         }
 
-        .signin-button:hover {
+        .createaccountbutton:hover {
             background-color: rgb(9, 83, 115);
         }
 
-        .forgot-password {
-            text-align: center;
-            margin-top: 10px;
+        .human-authentication-container {
+            margin-top: 15px;
+            padding: 10px;
+            border: 1px solid rgb(9, 83, 115); /* Outlined border */
+            border-radius: 5px; /* Rounded corners */
+            display: flex;
+            align-items: center;
+            justify-content: center;
         }
 
-        .forgot-password a {
-            color: rgb(9, 83, 115);
-            text-decoration: none;
+        .human-authentication input[type="checkbox"] {
+            margin-right: 10px;
         }
 
-        .forgot-password a:hover {
-            text-decoration: underline;
-        }
-
-        .create-account-link {
+        .already-have-account {
             text-align: center;
             margin-top: 15px;
         }
 
-        .create-account-link a {
+        .already-have-account a {
             color: rgb(9, 83, 115);
             text-decoration: none;
         }
 
-        .create-account-link a:hover {
+        .already-have-account a:hover {
             text-decoration: underline;
         }
+
     </style>
 </head>
 <body>
 
     <div class="signin-container">
-        <h2>Sign In</h2>
-        <form action="login.html" method="POST">
+        <h2>Create Account</h2>
+        <form action="create_account.html" method="POST">
+            <label for="first-name">First Name:</label>
+            <input type="text" id="first-name" name="first-name" required>
+
+            <label for="last-name">Last Name:</label>
+            <input type="text" id="last-name" name="last-name" required>
+
             <label for="username">Username:</label>
             <input type="text" id="username" name="username" required>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
 
             <label for="password">Password:</label>
             <input type="password" id="password" name="password" required>
 
-            <button class="signin-button" type="submit">Sign In</button>
+            <!-- Separate Container for Human Authentication -->
+            <div class="human-authentication-container">
+                <input type="checkbox" id="human" name="human" required>
+                <label for="human">ARE YOU HUMAN?</label>
+            </div>
+
+            <button class="createaccountbutton" type="submit">Create Account</button>
         </form>
 
-        <div class="forgot-password">
-            <p><a href="forgot_password.html">Forgot your password?</a></p>
-        </div>
-
-        <div class="create-account-link">
-            <p>Don't have an account? <a href="create_account.html">Create Account</a></p>
+        <div class="already-have-account">
+            <p>Already have an account? <a href="signIn.html">Login In</a></p>
         </div>
     </div>
-
+<a><button><href: class="signIn.html"></href:signin></button></a>
 </body>
 </html>
